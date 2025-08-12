@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Nearby IQOS Stores / IQOS Mağazalar</title>
+
+  <link rel="stylesheet" href="https://unpkg.com/leaflet/dist/leaflet.css"/>
+  <link rel="stylesheet" href="style.css"/>
+</head>
+<body>
+  <div class="app">
+    <header>
+      <h1 id="title">Nearby IQOS Stores</h1>
+      <div class="controls">
+        <div class="lang">
+          <button id="lang-en" class="lang-btn active">EN</button>
+          <button id="lang-az" class="lang-btn">AZ</button>
+        </div>
+        <div class="actions">
+          <input id="addressInput" placeholder="Adres yazın..." list="suggestions" autocomplete="off" />
+          <datalist id="suggestions"></datalist>
+          <button id="searchBtn">Search</button>
+          <button id="gpsBtn" title="Use device location">📍</button>
+        </div>
+      </div>
+    </header>
+
+    <main>
+      <section class="left">
+        <div class="info" id="info">Enter address or use GPS to find nearest stores.</div>
+        <ul id="results" class="results"></ul>
+      </section>
+
+      <section class="right">
+        <div id="map" class="map"></div>
+      </section>
+    </main>
+
+    <footer>
+      <small id="footerText">Powered by OpenStreetMap · Data stored locally in stores.js</small>
+    </footer>
+  </div>
+
+  <script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>
+  <script src="stores.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>
